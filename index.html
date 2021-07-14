@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light"
+        style="padding-left: 40px; padding-right: 50px; background-color: rgb(243, 239, 239);">
+        <div class="fluid">
+            <a href="index.html"><img src="imges/OLX icon.png" alt="OLX" width="45px" height="45px"
+                    style="opacity: 0.9;"></a>
+        </div>
+        <div>
+            <select id="location">
+                <option value="Select Location" selected>Select Location</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Korea">Korea</option>
+                <option value="India">India</option>
+                <option value="America">America</option>
+                <option value="England">England</option>
+            </select>
+        </div>
+        <input type="search" name="serch" id="search" placeholder="Find Cars, Mobile Phones and more...">
+        <a href=""><i onclick="searchicon()" class="fa fa-search fa-sm" aria-hidden="true"
+                style="font-size: 18px;"></i></a>
+        <button onclick="logout()" id="login">Logout</button>
+        <button id="sell"><strong style="font-size: 25px;">+</strong>SELL</button>
+
+    </nav>
+
+    <div class="CartRider" style=" text-align: center;padding: 10px;">
+        <a href="cart.html"
+            style="color: black; font-weight: bold;  border-bottom: 2px solid black; text-decoration: none;">See
+            your Cart</a>
+    </div>
+
+
+    <div>
+        <img src="imges/crousel.png" alt="Sell it!" width="100%">
+    </div>
+
+    <div>
+        <h3 style="opacity: 0.9; margin-top: 20px; margin-left: 60px; margin-bottom: 20px;">Fresh recommendations</h3>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 g-5" style="margin-left: 35px; margin-right: 40px;">
+        <div onclick="addToCart()" id="item1">
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product1.jpg" class="card-img-top" alt="Microprocessor chip" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 10,000</h5>
+                        <p class="card-text">Microprocessor Chip</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">MODEL TOWN, LAHORE</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="item2" style="cursor: pointer;">
+            <div class="card h-200" style="width: 18rem;">
+                <img src="imges/product2.jpg" class="card-img-top" alt="Pepsi" height="218px">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Rs 47.0</h5>
+                    <p class="card-text">Sugar Free Pepsi</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <small class="text-muted">GULSHAN-E-IQBAL, KARACHI</small>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="cursor: pointer;">
+            <div class="card h-200" style="width: 18rem;">
+                <img src="imges/product3.jpg" class="card-img-top" alt="Automatic Washroom Machine" height="218px">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Rs 150,000</h5>
+                    <p class="card-text">Automatic Washroom Machine</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <small class="text-muted">MINAR-E-PAKISTAN, LAHORE</small>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="cursor: pointer;">
+            <div class="card h-200" style="width: 18rem;">
+                <img src="imges/product4.jpg" class="card-img-top" alt="Tires" height="218px">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Rs 18,000</h5>
+                    <p class="card-text">Japani Tires</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <small class="text-muted">DEFENCE, LAHORE</small>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="cursor: pointer;">
+            <div class="card h-200" style="width: 18rem;">
+                <img src="imges/product5.jpg" class="card-img-top" alt="Portable Camera" height="218px">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Rs 7,200</h5>
+                    <p class="card-text">Portable Camera</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <small class="text-muted">CANBERRA, AUSTRALIA</small>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="cursor: pointer;">
+            <div class="card h-200" style="width: 18rem;">
+                <img src="imges/product6.jpg" class="card-img-top" alt="Android Charger" height="218px">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Rs 250</h5>
+                    <p class="card-text">Android Charger</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <small class="text-muted">CHANDIGARH, INDIA</small>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="cursor: pointer;">
+            <div class="card h-200" style="width: 18rem;">
+                <img src="imges/product7.jpg" class="card-img-top" alt="HP Imported Laptop" height="218px">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Rs 10,000</h5>
+                    <p class="card-text">HP Imported Laptop</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <small class="text-muted">DELHI, INDIA</small>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="cursor: pointer;">
+            <div class="card h-200" style="width: 18rem;">
+                <img src="imges/product8.jpg" class="card-img-top" alt="Wireless Mouse" height="218px">
+                <div class="card-body bg-light">
+                    <h5 class="card-title">Rs 689</h5>
+                    <p class="card-text">Wireless Mouse</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <small class="text-muted">ANTALIA, TURKEY</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="load">
+        <button onclick="loadmore()" id="loading">Load more</button>
+    </div>
+    <div id="todisplay1">
+
+    </div>
+
+    <div id="todisplay" style="display: none;">
+        <div class="row row-cols-1 row-cols-md-4 g-5" style="margin-left: 35px; margin-right: 40px;">
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product9.jpg" class="card-img-top" alt="Clock" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 1,200</h5>
+                        <p class="card-text">Office Wall Clock</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">RAWALPINDI, PAKISTAN</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product10.jpg" class="card-img-top" alt="Speakers" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 700</h5>
+                        <p class="card-text">Speakers</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">KARACHI, PAKISTAN</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product11.jpg" class="card-img-top" alt="Dumbbells" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 999</h5>
+                        <p class="card-text">2 Dumbbells</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">BOMBAI, INDIA</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product12.jpg" class="card-img-top" alt="Bicycle" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 6,550</h5>
+                        <p class="card-text">Sports Bicycle</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">US, CANADA</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product13.jpg" class="card-img-top" alt="Iphone12" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 15,2500</h5>
+                        <p class="card-text">Iphone 12 pro max</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">HELVATICA, BELGIUM</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product14.jpg" class="card-img-top" alt="Keybord" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 959</h5>
+                        <p class="card-text">Portable Keyboard</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">PUNJAB, PAKISTAN</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product15.jpg" class="card-img-top" alt="Calculator" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 520</h5>
+                        <p class="card-text">Sipmle Calculator</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">SINDH, PAKISTAN</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="cursor: pointer;">
+                <div class="card h-200" style="width: 18rem;">
+                    <img src="imges/product16.jpg" class="card-img-top" alt="Table" height="218px">
+                    <div class="card-body bg-light">
+                        <h5 class="card-title">Rs 1,300</h5>
+                        <p class="card-text">Study Table</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">RAMNAGAR, INDIA</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <table class="container">
+            <tr>
+                <th>POPULAR CATEGORIES</th>
+                <th>TRENDING SEARCHES</th>
+                <th>ABOUT US</th>
+                <th>OLX</th>
+                <th>FOLLOW US</th>
+            </tr>
+            <tr>
+                <td><a href="">Cars</a></td>
+                <td><a href="">Bikes</a></td>
+                <td><a href="">About EMPG</a></td>
+                <td><a href="">Help</a></td>
+                <td><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a><a href=""><i
+                            class="fa fa-twitter-square" aria-hidden="true"></i></a><a href=""><i
+                            class="fa fa-youtube-play" aria-hidden="true"></i></a><a href=""><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+                <td><a href="">Flats for rent</a></td>
+                <td><a href="">Watches</a></td>
+                <td><a href="">OLX Blog</a></td>
+                <td><a href="">Sitemap</a></td>
+            </tr>
+            <tr>
+                <td><a href="">Mobile Phones</a></td>
+                <td><a href="">Books</a></td>
+                <td><a href="">Contact Us</a></td>
+                <td><a href="">Legal and Privacy information</a></td>
+            </tr>
+            <tr>
+                <td><a href="">Jogs</a></td>
+                <td><a href="">Dogs</a></td>
+                <td><a href="">OLX for Buisinesses</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

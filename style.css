@@ -1,0 +1,166 @@
+#location{
+    padding: 8px;
+    padding-left: -10px;
+    padding-right: 103px;
+    font-size: 20px;
+    margin-left: -40px;
+}
+
+.fa-search{
+    margin-left: -63px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 9px;
+    padding-top: 17px;
+    border: 2px solid black;
+    color: white;
+    background-color: rgb(51, 49, 49);
+}
+#search{
+    width: 600px;
+    padding-bottom: 7px;
+    padding-top: 9px;
+    font-size: 18px;
+    margin-left: -40px;
+}
+#login{
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+    letter-spacing: 1px;
+    margin-left: -50px;
+}
+#login:hover{
+    border: none;
+}
+#sell{
+    font-weight: bold;
+    background: none;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    border-top: 5px solid rgb(0, 218, 246);
+    border-right: 5px solid rgb(12, 77, 255);
+    border-bottom: 5px solid rgb(251, 248, 29);
+    border-left: 5px solid rgb(251, 248, 29);
+    border-radius: 18px;
+}
+
+
+
+
+
+
+.mainPage {
+    display: flex;
+    justify-content: center;
+}
+
+.loginForm {
+    padding: 28px;
+    margin-top: 140px;
+    border: 2px solid gray;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 3px 2px 5px palegreen;
+}
+
+.loginForm:hover {
+    margin-top: 139px;
+    margin-left: -3px;
+    transition: 0.5s;
+    box-shadow: 8px 7px 5px palegreen;
+}
+
+.loginForm h2 {
+    text-shadow: 2px 2px 2px teal;
+    margin-bottom: 68px;
+    margin-top: -0px;
+    font-size: 30px;
+    margin-left: 100px;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.loginForm h5 {
+    text-shadow: 1px 1px 2px teal;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#password,#username{
+    padding: 8px;
+    width: 250px;
+    font-size: 14px;
+}
+#login2{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#login2 button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px teal;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#login2 button:hover{
+    margin-left: -5px;
+    transition: 0.4s;
+    box-shadow: 3px 3px 2px palegreen;
+}
+.main{
+    background-color: blanchedalmond;
+    height: 100vh;
+    margin-top: -7px;
+    margin-right: -8px;
+}
+
+#load{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#load button{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    background: none;
+    font-weight: bold;
+}
+#load button:hover{
+    border: 4px solid black;
+}
+.col:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.tohide{
+    display: none;
+}
+#todisplay1{
+    margin-top: 48px;
+}
+#footer table a{
+    text-decoration: none;
+    color: black;
+    margin: 4px;
+    opacity: 0.7;
+}
+#footer table a:hover{
+    opacity: 0.9;
+}
+#footer{
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    padding: 35px;
+    border-top: 1px solid rgb(189, 189, 189);
+    margin-top: 50px;
+}
